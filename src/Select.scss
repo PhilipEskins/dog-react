@@ -1,0 +1,50 @@
+
+
+.background {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background: rgba(000, 0, 0, .7);
+  width: 50vw;
+  height: auto;
+  border: 3px solid black;
+  padding: 5px;
+  border-radius: 10px;
+  margin: auto;
+}
+.Column{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+}
+
+.textDog {
+  margin-right: 2vw;
+}
+
+.buttonDog {
+  
+}
+
+.dogContent {
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+#dogInput {
+ padding: 16px;
+ font-size: 16px;
+ border: none;
+ cursor: pointer;
+}
