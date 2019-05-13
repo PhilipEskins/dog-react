@@ -1,68 +1,62 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# _Dog Guessing Game - React Edition_
 
-## Available Scripts
+#### _Website that lets you guess the breed of a dog and earn points._
 
-In the project directory, you can run:
+#### By _**Philip Eskins**_
 
-### `npm start`
+## Description
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+_This application shows a random picture of a dog from https://dog.ceo/dog-api/ it also populates the drop down list with the breed categories that are available from the api. The user is able to select the dog from the list and earn points when they guess correctly. Upon earning one point you are offered the chance you submit your name to be recorded as a highscore. The app also stores the key associated with your record so you can update your score._
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+## Current Features
+* Displays random picture from api.
+* Grabs list of breeds from the api to populate the drop down list.
+* Able to select the dog based on breed.
+* Correct guess will add 1 point.
+* After you earn one point you are able to upload your score to the database.
+* The website will then store your database record key so you can continue to update your score.
 
-### `npm test`
+## Future Features
+* Option to get a new picture if you can't figure out what breed it is.
+* Implement a way to check user inputs so it doesn't store any bad words.
+* Possibly provide hints.
+* Better site design.
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## Process
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+#### 5/9/2019
+_Had a new idea to implement a High Score function to the game. We got it to store the score and a typed name into the database. Then we added a way to store the randomly generated key to the local storage so you can update your score if you wanted to. Worked with <a href='https://github.com/cjbreaux'>Chris Breaux</a> again on this day._
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+#### 5/8/2019
+_Got an idea to implement redux into this project. Spent most of the day refactoring to allow the app to use redux. Towards the end of the day we started adding Firebase to store information too. Worked with <a href='https://github.com/cjbreaux'>Chris Breaux</a> on this day._
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+#### 5/7/2019
+_Decided to recreate an old site I did using react. It was a basic site that got a random picture of a dog and gave you points if you guess correctly. Was able to redo the basic function of the original website. Worked with <a href='https://github.com/drewyox'>Drew Yoxsimer</a> on this day._
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Setup/Installation Requirements
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+* _Download repository from https://github.com/PhilipEskins/dog-react/_
+* _Type npm install from the command line interface_
+* _Type npm run start from the command line interface_
+* _If you'd like to alter or see the code for the project, after downloading open the project up in your favorite code editor._
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Known Bugs
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+_Currently you are unable to get a new picture if you can't figure out what kind of dog is in the current picture._
 
-## Learn More
+## Support and contact details
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+_If you have problems or would like to comment about something feel free to contact me at philipeskins@gmail.com_
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Technologies Used
 
-### Code Splitting
+_This website uses HTML, SCSS, JavaScript, Webpack, React, redux, Firebase, local storage._
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
 
-### Analyzing the Bundle Size
+### License
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+*MIT*
 
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Copyright (c) 2019 **_Philip Eskins_**

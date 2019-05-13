@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.scss';
+import './scss/App.scss';
 import DogPic from './components/DogPic';
 import DogSelect from './components/DogSelect';
 import Score from './components/Score';

@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import '../Score.scss';
+import '../scss/Score.scss';
 import { connect } from 'react-redux';
 import { addHighScore, watchLatestPlayer, updateScore } from '../actions/firebase'
 

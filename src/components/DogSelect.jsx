@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import WrongGuess from './WrongGuess';
-import '../Select.scss';
+import '../scss/Select.scss';
 
 function DogSelect(props){
   let wrongGuess = null;
