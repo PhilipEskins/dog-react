@@ -14,7 +14,7 @@ function DogSelect(props){
       <div className='background'>
         <div className='Column'>
           <div className='row'>
-            <h1 className='textDog'>Dog Select</h1>
+            <h1 className='textDog'>Select Breed</h1>
             <select id="dogInput">
             {props.dogList.map((dogs, index) =>
               <option key={index} className="dogContent" value={dogs}>{dogs}</option>

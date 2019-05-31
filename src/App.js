@@ -72,7 +72,6 @@ class App extends Component{
     )
   };
 
-
   compareGuess(yourGuess){
     if(yourGuess === this.state.breed){
       let scoreAdd = this.props.score + 1;
@@ -90,10 +89,21 @@ class App extends Component{
   render(){
     return (
       <div id='container' className="App">
-        <HighScores />
-        <DogPic className='dogShot'/>
-        <Score />
-        <DogSelect dogList = {this.state.list} compareGuess = {this.compareGuess} showFail={this.state.showFail}/>
+        <div className="border">
+          <div className="gameArea">
+            <div className='headerGrid'>
+              <div className='rightTriangle'></div>
+              <h1 className='header'>What breed of dog is this?</h1>
+              <div className='leftTriangle'></div>
+            </div>
+            <DogPic className='dogShot'/>
+            <Score />
+            <DogSelect dogList = {this.state.list} compareGuess = {this.compareGuess} showFail={this.state.showFail}/>
+          </div>
+        </div>
+        <div className="scoreArea">
+          <HighScores />
+        </div>
 
       </div>
     );

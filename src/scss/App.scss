@@ -1,5 +1,66 @@
 
 body {
-  background-image: url('./../assets/doggie.jpg');
+  @import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+  background-color: #344F5A;
   color: white;
+  font-family: Raleway, sans-serif;
+}
+
+// .App {
+//   display: flex;
+// }
+
+.gameArea {
+  display: grid;
+  background-color: #d3d3d3;
+  border: solid 2vw #777777;
+}
+
+.border {
+  border: solid 5px black;
+}
+
+.headerGrid {
+  display: grid;
+  grid: 1fr / 1fr 1fr 1fr;
+  margin: 0;
+  padding: 0;
+  align-items: stretch;
+}
+
+.rightTriangle {
+  align-self: center;
+  grid-column: 1;
+  grid-row: 1;
+  width: 0;
+  height: 0;
+  border-top: 30px solid transparent;
+  border-bottom: 30px solid transparent;
+
+  border-left: 30px solid #d3d3d3;
+  z-index: 1;
+}
+
+.header {
+  align-self: center;
+  text-align: center;
+  grid-column: 1/4;
+  grid-row: 1;
+  background-color: #2c505c;
+  padding: 10px 0px;
+  margin: 0;
+}
+
+.leftTriangle {
+  align-self: center;
+  justify-self: right;
+  grid-column: 3;
+  grid-row: 1;
+  width: 0;
+  height: 0;
+  border-top: 30px solid transparent;
+  border-bottom: 30px solid transparent;
+
+  border-right: 30px solid #d3d3d3;
+  z-index: 1;
 }

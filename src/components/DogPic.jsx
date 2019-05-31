@@ -6,7 +6,7 @@ import { connect } from 'react-redux';
 function DogPic(props){
     return(
       <div className='center'>
-        <h1 className='text'>What kind of doggie is this?</h1>
+
         <img className='picture' src={props.dogPicture} alt="Adorable puppy"/>
       </div>
     )
