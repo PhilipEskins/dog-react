@@ -15,7 +15,8 @@ class App extends Component{
     this.state = {
       list: [],
       breed: '',
-      showFail: false
+      showFail: false,
+      userGuess: '',
     }
     this.componentWillMount = this.componentWillMount.bind(this);
     this.compareGuess = this.compareGuess.bind(this);
@@ -73,10 +74,10 @@ class App extends Component{
   };
 
   compareGuess(yourGuess){
+    this.setState({userGuess: yourGuess});
     if(yourGuess === this.state.breed){
       let scoreAdd = this.props.score + 1;
       this.getNewPicture();
-      // this.setState({score: scoreAdd})
       this.props.dispatch(receiveScore(scoreAdd))
 
 
@@ -96,9 +97,15 @@ class App extends Component{
               <h1 className='header'>What breed of dog is this?</h1>
               <div className='leftTriangle'></div>
             </div>
-            <DogPic className='dogShot'/>
-            <Score />
-            <DogSelect dogList = {this.state.list} compareGuess = {this.compareGuess} showFail={this.state.showFail}/>
+            <div className="dogPhoto">
+              <DogPic className='dogShot'/>
+            </div>
+            <div className="dogScore">
+              <Score />
+            </div>
+            <div className='dogSelect'>
+              <DogSelect dogList = {this.state.list} compareGuess = {this.compareGuess} showFail={this.state.showFail} userGuess={this.state.userGuess}/>
+            </div>
           </div>
         </div>
         <div className="scoreArea">
@@ -109,14 +116,6 @@ class App extends Component{
     );
   }
 }
-//
-// App.propTypes = {
-//   picture: PropTypes.string,
-//   list: PropTypes.array,
-//   breed: PropTypes.string,
-//   score: PropTypes.number,
-//   showFail: PropTypes.bool
-// }
 
 const mapStateToProps = state => {
   return{
