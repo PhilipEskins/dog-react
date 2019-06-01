@@ -1,0 +1,24 @@
+.wrapper {
+  border: solid 5px black;
+  color: black;
+  background-color: #d3d3d3;
+  h2 {
+    margin: 0;
+    margin-bottom: 10px;
+  }
+}
+
+.highScoreBorder {
+  border: solid 20px #777777;
+  padding: 10px;
+}
+
+.topNames {
+  display: flex;
+  justify-content: space-between;
+}
+
+.title {
+  border-bottom: black solid 3px;
+  text-align: center;
+}

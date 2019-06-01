@@ -1,17 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import '../scss/HighScores.scss';
 
 function HighScores(props) {
   return(
-    <div>
-      <p>Current top scores:</p>
-      <ul>
-        {props.highScores.slice(0,3).map(function(entry, index){
-          return <li key={index}>{entry.name} - {entry.savedScore}</li>
+    <div className='wrapper'>
+      <div className='highScoreBorder'>
+        <h2 className='title'>Current Top Scores:</h2>
+
+        {props.highScores.slice(0,10).map(function(entry, index){
+          return <div className='topNames'><span key={index} className='name'>{entry.name}</span><span className='scores'>{entry.savedScore}</span></div>
         })}
 
-      </ul>
+
+      </div>
     </div>
   )
 };

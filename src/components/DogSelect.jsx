@@ -5,15 +5,21 @@ import '../scss/Select.scss';
 function DogSelect(props){
   let wrongGuess = null;
   let dogCompare = null;
+  let wordBefore = null;
   if (props.showFail) {
-    wrongGuess = <h1>Incorrect! The puppy is not a {props.userGuess}</h1>
+    if (props.userGuess[0] === 'a' || props.userGuess[0] === 'e' || props.userGuess[0] === 'i' || props.userGuess[0] === 'o' || props.userGuess[0] === 'u') {
+      wordBefore = 'an';
+    } else {
+      wordBefore = 'a';
+    }
+    wrongGuess = <h1>Incorrect! The puppy is not {wordBefore} {props.userGuess}</h1>
   }
 
   return(
     <div className='background'>
       <div className='Column'>
         <div className='row'>
-          <h1 className='textDog'>Select Breed</h1>
+          <h2 className='textDog'>Select Breed</h2>
           <select id="dogInput">
           {props.dogList.map((dogs, index) =>
             <option key={index} className="dogContent" value={dogs}>{dogs}</option>
